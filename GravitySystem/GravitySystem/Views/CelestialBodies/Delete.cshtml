@@ -1,0 +1,39 @@
+﻿@model GravitySystem.Models.CelestialBody
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<div class="glass-panel">
+    <h1 class="page-title">Eliminar Cuerpo Celeste</h1>
+    <p class="page-subtitle">Confirma si deseas eliminar este registro del sistema gravitacional.</p>
+
+    <dl class="row detail-list">
+        <dt class="col-sm-3">Nombre</dt>
+        <dd class="col-sm-9">@Model.Name</dd>
+
+        <dt class="col-sm-3">Masa</dt>
+        <dd class="col-sm-9">@Model.Mass</dd>
+
+        <dt class="col-sm-3">Posición X</dt>
+        <dd class="col-sm-9">@Model.PositionX</dd>
+
+        <dt class="col-sm-3">Posición Y</dt>
+        <dd class="col-sm-9">@Model.PositionY</dd>
+
+        <dt class="col-sm-3">Velocidad X</dt>
+        <dd class="col-sm-9">@Model.VelocityX</dd>
+
+        <dt class="col-sm-3">Velocidad Y</dt>
+        <dd class="col-sm-9">@Model.VelocityY</dd>
+
+        <dt class="col-sm-3">Tipo</dt>
+        <dd class="col-sm-9">@Model.Type</dd>
+    </dl>
+
+    <form asp-action="Delete" class="mt-4">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
