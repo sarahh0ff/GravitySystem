@@ -1,0 +1,41 @@
+﻿@model GravitySystem.Models.CelestialBody
+
+@{
+    ViewData["Title"] = "Detalles";
+}
+
+<div class="glass-panel">
+    <h1 class="page-title">Detalles del Cuerpo Celeste</h1>
+    <p class="page-subtitle">Consulta completa de propiedades físicas y orbitales.</p>
+
+    <dl class="row detail-list">
+        <dt class="col-sm-3">Nombre</dt>
+        <dd class="col-sm-9">@Model.Name</dd>
+
+        <dt class="col-sm-3">Masa</dt>
+        <dd class="col-sm-9">@Model.Mass</dd>
+
+        <dt class="col-sm-3">Posición X</dt>
+        <dd class="col-sm-9">@Model.PositionX</dd>
+
+        <dt class="col-sm-3">Posición Y</dt>
+        <dd class="col-sm-9">@Model.PositionY</dd>
+
+        <dt class="col-sm-3">Velocidad X</dt>
+        <dd class="col-sm-9">@Model.VelocityX</dd>
+
+        <dt class="col-sm-3">Velocidad Y</dt>
+        <dd class="col-sm-9">@Model.VelocityY</dd>
+
+        <dt class="col-sm-3">Tipo</dt>
+        <dd class="col-sm-9">@Model.Type</dd>
+
+        <dt class="col-sm-3">Activo</dt>
+        <dd class="col-sm-9">@Model.IsActive</dd>
+    </dl>
+
+    <div class="mt-4 d-flex gap-2">
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Editar</a>
+        <a asp-action="Index" class="btn btn-secondary">Volver</a>
+    </div>
+</div>

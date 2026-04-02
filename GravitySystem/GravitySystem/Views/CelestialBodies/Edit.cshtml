@@ -1,0 +1,62 @@
+﻿@model GravitySystem.Models.CelestialBody
+
+@{
+    ViewData["Title"] = "Editar cuerpo celeste";
+}
+
+<div class="glass-panel">
+    <h1 class="page-title">Editar Cuerpo Celeste</h1>
+    <p class="page-subtitle">Actualiza los datos registrados del cuerpo astronómico seleccionado.</p>
+
+    <div class="row">
+        <div class="col-md-7">
+            <form asp-action="Edit">
+                <input type="hidden" asp-for="Id" />
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                <div class="mb-3">
+                    <label asp-for="Name" class="form-label">Nombre</label>
+                    <input asp-for="Name" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Mass" class="form-label">Masa</label>
+                    <input asp-for="Mass" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="PositionX" class="form-label">Posición X</label>
+                    <input asp-for="PositionX" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="PositionY" class="form-label">Posición Y</label>
+                    <input asp-for="PositionY" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="VelocityX" class="form-label">Velocidad X</label>
+                    <input asp-for="VelocityX" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="VelocityY" class="form-label">Velocidad Y</label>
+                    <input asp-for="VelocityY" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Type" class="form-label">Tipo</label>
+                    <input asp-for="Type" class="form-control" />
+                </div>
+
+                <div class="form-check mb-4">
+                    <input asp-for="IsActive" class="form-check-input" />
+                    <label asp-for="IsActive" class="form-check-label">Activo</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                <a asp-action="Index" class="btn btn-secondary">Volver</a>
+            </form>
+        </div>
+    </div>
+</div>
