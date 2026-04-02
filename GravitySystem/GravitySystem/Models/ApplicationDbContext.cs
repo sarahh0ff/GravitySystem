@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
 
-namespace GravitySystem.Models
+namespace GravitySystem.Models//tengo que poner un cometario a ver que tal
 {
     public class ApplicationDbContext : DbContext
     {
